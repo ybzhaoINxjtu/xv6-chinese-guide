@@ -9,7 +9,7 @@
 3. 交互通信（interfaction）
 
 本章对操作系统如何达到这三个要求提供了一个概览。 条条大路通罗马（It turns out there are many ways to do so）， 但是本文主要关注点为主流设计的Unix使用的单内核（monolithic kernel）。本章介绍操作系统的组织架构以跟踪xv6开始运行时创建的第一个进程为例。在介绍这些之前，本文还提供xv6所有主要抽象层（all major abstractions）实现的简介（glimpse），包括它们如何交互， 以及复用(multiplexing)，隔离（isolation），交互通信（interfaction）三个要求如何实现， 接下来的章节会探讨每个抽象层的更多细节。
-Xv6抛在Intel 80386 或者后来的x86处理器平台上， 多数的xv6底层功能，比如进程实现都是x86实现（x86-specific）。本书假设读者已经对某些平台的机器汇编级别（machine-level）编程有所了解。如果有和x86实现(x86-specific有关的概念出现，本书会做进一步解释。 附录A简单介绍了PC平台的相关概念
+Xv6抛在Intel 80386 或者后来的x86处理器平台上， 多数的xv6底层功能，比如进程实现都是x86实现（x86-specific）。本书假设读者已经对某些平台的机器汇编级别（machine-level）编程有所了解。如果有和x86实现(x86-specific有关的概念出现，本书会做进一步解释。 附录A简单介绍了PC平台的相关概念。
 
 ###用户模式（user mode）， 内核模式（kernel mode），系统调用（system calls）
 
